@@ -45,11 +45,11 @@ GitHub Copilot (sugerencias inteligentes)
 # 🎨 Wireframes/Mockups de la Aplicación:
 
 # LOGO DE LA APP
-![CastOxxo_Logo](https://drive.google.com/uc?export=view&id=1_gYL5opIh20N5PBYLIuN8Vcqs1QGdh9v)
+![CastOxxo Logo](https://drive.google.com/uc?export=view&id=1_gYL5opIh20N5PBYLIuN8Vcqs1QGdh9v)
 
 
 [LINK PARA VER EL ESQUEMA:](https://drive.google.com/file/d/1mUh-7uv2DSakOieUVSTlb7cOvwLIGHJ-/view?usp=drivesdk)
 
 # 📍 Diagrama de Flujo de la Aplicación:
 
-
+![CastOxxo Diagrama](https://drive.google.com/file/d/13pThAUROAbAl07b6r_wQUTs17Pzb_sD5/view?usp=sharing)
