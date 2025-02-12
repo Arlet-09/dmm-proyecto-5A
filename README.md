@@ -52,4 +52,5 @@ GitHub Copilot (sugerencias inteligentes)
 
 # 📍 Diagrama de Flujo de la Aplicación:
 
-![CastOxxo Diagrama](https://drive.google.com/file/d/13pThAUROAbAl07b6r_wQUTs17Pzb_sD5/view?usp=sharing)
+![CastOxxo Diagrama](https://drive.google.com/uc?export=view&id=13pThAUROAbAl07b6r_wQUTs17Pzb_sD5)
+
