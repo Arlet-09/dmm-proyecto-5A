@@ -7,13 +7,19 @@ import RegistroScreen from '../pantallas/Registro';
 import UsuarioScreen from '../pantallas/UsuarioScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
+<<<<<<< HEAD
 import { useNavigation } from '@react-navigation/native';
+=======
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   const [usuario, setUsuario] = useState(null); // Estado para almacenar el usuario
+<<<<<<< HEAD
   const navigation = useNavigation(); // Hook de navegación
+=======
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
 
   useEffect(() => {
     const cargarUsuario = async () => {
@@ -23,11 +29,18 @@ const DrawerNavigator = () => {
         setUsuario(JSON.parse(userData));
       } else {
         setUsuario(null);
+<<<<<<< HEAD
         navigation.navigate('Registro'); // Redirigir a la pantalla de registro si no hay usuario
       }
     };
     cargarUsuario();
   }, [navigation]); // Dependencia de navigation para asegurar que se navegue al cargar
+=======
+      }
+    };
+    cargarUsuario();
+  }, []);
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
 
   return (
     <Drawer.Navigator
@@ -84,4 +97,8 @@ const DrawerNavigator = () => {
   );
 };
 
+<<<<<<< HEAD
 export default DrawerNavigator;
+=======
+export default DrawerNavigator;
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304

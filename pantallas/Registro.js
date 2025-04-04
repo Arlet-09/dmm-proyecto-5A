@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert, TouchableOpacity } from 'react-native';
+<<<<<<< HEAD
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 
@@ -11,11 +12,21 @@ const RegistroScreen = () => {
 
   const handleRegister = async () => {
     // Validación de campos vacíos
+=======
+
+const RegistroScreen = ({ navigation }) => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleRegister = () => {
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
     if (!username || !email || !password) {
       Alert.alert('¡Error!', 'Por favor, completa todos los campos');
       return;
     }
 
+<<<<<<< HEAD
     try {
       console.log("Enviando solicitud al backend...");
       console.log("Datos a enviar:", { username, email, password });  // Verificar los valores enviados
@@ -54,6 +65,29 @@ const RegistroScreen = () => {
       console.error('Error en el registro:', error);
       Alert.alert('¡Error!', 'No se pudo completar el registro');
     }
+=======
+    // Aquí puedes hacer una petición al backend para guardar el usuario
+    fetch('http://localhost:5000/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, email, password }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          Alert.alert('¡Registro exitoso!', 'Bienvenido a la tienda');
+          navigation.navigate('Inicio');
+        } else {
+          Alert.alert('¡Error!', data.message || 'Hubo un problema con el registro');
+        }
+      })
+      .catch(error => {
+        console.error('Error en el registro:', error);
+        Alert.alert('¡Error!', 'No se pudo completar el registro');
+      });
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
   };
 
   return (
@@ -81,10 +115,18 @@ const RegistroScreen = () => {
         onChangeText={setPassword}
       />
 
+<<<<<<< HEAD
+=======
+      {/* Botón de registro estilizado */}
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
       <TouchableOpacity style={styles.botonRegistro} onPress={handleRegister}>
         <Text style={styles.botonTexto}>Registrar</Text>
       </TouchableOpacity>
 
+<<<<<<< HEAD
+=======
+      {/* Botón de volver al inicio */}
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
       <TouchableOpacity style={styles.botonVolver} onPress={() => navigation.navigate('Inicio')}>
         <Text style={styles.botonVolverTexto}>Volver al inicio</Text>
       </TouchableOpacity>

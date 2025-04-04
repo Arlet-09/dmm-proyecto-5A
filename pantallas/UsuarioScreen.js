@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
+<<<<<<< HEAD
 import RegistroScreen from './Registro';
 
+=======
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
 
 const UsuarioScreen = () => {
   const [usuario, setUsuario] = useState(null); // Establecer el estado inicial en null
@@ -25,7 +28,11 @@ const UsuarioScreen = () => {
   const cerrarSesion = async () => {
     await AsyncStorage.removeItem('usuario');
     alert('Sesión cerrada');
+<<<<<<< HEAD
     navigation.replace('Registro'); // Redirige a la pantalla de login
+=======
+    navigation.replace('LoginScreen'); // Redirige a la pantalla de login
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
   };
 
   return (
@@ -59,7 +66,14 @@ const UsuarioScreen = () => {
           <Text style={styles.textoNoRegistrado}>¡Bienvenido a la sección de Usuario!</Text>
           <Text style={styles.textoNoRegistrado}>Regístrate para tener más funciones</Text>
 
+<<<<<<< HEAD
           <TouchableOpacity style={styles.botonRegistro} onPress={() => navigation.navigate('Registro')}>
+=======
+          <TouchableOpacity 
+            style={styles.botonRegistro} 
+            onPress={() => navigation.replace('Registro')} // Redirige a la pantalla de registro
+          >
+>>>>>>> 80b206326f9efa10e307831228efe4f91ca30304
             <Text style={styles.botonTexto}>Registrarme</Text>
           </TouchableOpacity>
         </>
