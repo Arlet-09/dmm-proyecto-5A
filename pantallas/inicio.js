@@ -10,7 +10,7 @@ const InicioScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/productos')  
+    fetch('https://backend-castoxxo-2025.onrender.com/api/products')  
       .then(response => response.json())
       .then(data => {
         setProductos(data);
